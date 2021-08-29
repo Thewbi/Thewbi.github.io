@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --pale-blue: hsl(225, 100%, 94%);
+
+      --bright-blue: hsl(245, 75%, 52%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+
+      --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      --shadow-2: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    }
+
+    .attribution {
+      margin-top: 200px;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(240, 1%, 66%);
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+    body {
+      top: 0;
+      left: 0;
+
+      background-image: url("images/pattern-background-desktop.svg");
+      background-repeat: no-repeat;
+      background-attachment: top;
+      background-size: 120% auto;
+
+      background-color: RGB(224 232 254);
+
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 700;
+    }
+
+    .card {
+      width: 450px;
+      height: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+
+      text-align: center;
+
+      background-color: white;
+
+      border-radius: 20px;
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+    }
+
+    .card-body {
+      padding: 45px;
+    }
+
+    .card-body>.caption {
+      font-weight: 900;
+      font-size: 1.7em;
+    }
+
+    .card-body>.punchline {
+      margin-top: 30px;
+      color: var(--desaturated-blue);
+    }
+
+    .color-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .color-container>.color-container-child {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border: 1px solid black;
+    }
+
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--very-pale-blue);
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .order-item a,
+    .order-item a:visited,
+    .order-item a:hover,
+    .order-item a:active {
+      font-weight: 500;
+      color: var(--bright-blue);
+    }
+
+    .order-item a:active {
+      text-decoration: none;
+    }
+
+    .order-item-pricing {
+      height: 45px;
+      margin-left: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      flex-direction: column;
+    }
+
+    .order-item-pricing .plan-name {
+      color: var(--dark-blue);
+    }
+
+    .order-item-pricing .plan-period {
+      margin-top: 0px;
+      color: var(--desaturated-blue);
+    }
+
+    .flex-div {
+      height: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .action-primary {
+      margin-top: 30px;
+      height: 45px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      cursor: pointer;
+
+      font-weight: 500;
+      font-size: 0.9em;
+      color: white;
+      background-color: var(--bright-blue);
+      box-shadow: var(--shadow-2);
+
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+    }
+
+    .action-cancel {
+      margin-top: 30px;
+      height: 45px;
+
+      font-weight: 500;
+      font-size: 0.9em;
+
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+
+      text-decoration: none;
+      color: var(--desaturated-blue);
+    }
+
+    .action-cancel:active {
+      color: var(--dark-blue);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-top-image">
+      <img src="images/illustration-hero.svg" />
+    </div>
+
+    <div class="card-body">
+      <span class="caption">Order Summary</span>
+
+      <section class="punchline">
+        You can now listen to millions of songs, audiobooks, and podcasts on
+        any device anywhere you like!
+      </section>
+
+      <div class="order-item">
+        <div class="flex-div">
+          <div><img src="images/icon-music.svg"></div>
+          <div class="order-item-pricing">
+            <div class="plan-name">Annual Plan</div>
+            <div class="plan-period">$59.99/year</div>
+          </div>
+        </div>
+        <div><a href="#">Change</a></div>
+      </div>
+
+      <div class="action-primary">Proceed to Payment</div>
+
+      <a href="#" class="action-cancel">Cancel Order</a>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your
+      Name Here</a>.
+  </div>
+
+  <div class="color-container">
+    <div title="--pale-blue" class="color-container-child" style="background-color: var(--pale-blue)"></div>
+    <div title="--very-pale-blue" class="color-container-child" style="background-color: var(--very-pale-blue)"></div>
+    <div title="--bright-blue" class="color-container-child" style="background-color: var(--bright-blue)"></div>
+    <div title="--desaturated-blue" class="color-container-child" style="background-color: var(--desaturated-blue)">
+    </div>
+    <div title="--dark-blue" class="color-container-child" style="background-color: var(--dark-blue)"></div>
+  </div>
+</body>
+
+</html>

@@ -127,7 +127,6 @@ body {
   flex-wrap: wrap;
   gap: 25px;
   justify-content: space-between;
-
 }
 
 .overview-today {
@@ -136,21 +135,22 @@ body {
 
 @media (max-width: 800px) {
   :root {
-    --overview-card-min-width: 400px;
+    /*--overview-card-min-width: 400px;*/
+    --overview-card-min-width: 250px;
+    /*--overview-card-min-width: 80%;*/
   }
 
   .section-content {
     display: flex;
     justify-content: space-around;
     gap: 25px;
-    width: 60%;
+    /**/width: 80%;
     margin-left: auto;
     margin-right: auto;
-
   }
 
   .view-container {
-    width: 500px;
+    /*width: 500px;*/
     margin-left: auto;
     margin-right: auto;
   }
@@ -284,27 +284,7 @@ body {
   vertical-align: 15%;
 }
 
-/*
 .details-card {
-  min-width: 250px;
-  height: 100px;
-  background-color: var(--dark-desaturated-blue-card-background);
-
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 20px;
-
-  display: grid;
-  grid-template-columns: 100px 0px;
-  grid-auto-rows: 20px 20px;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-*/
-
-.details-card {
-
-
   min-width: 210px;
   height: 70px;
   background-color: var(--card-background);

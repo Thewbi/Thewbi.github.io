@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+  </style>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="toggle.css">
+
+</head>
+
+<body>
+
+  <div class="view-container">
+
+    <header>
+      <div style="display:flex; justify-content: space-between;">
+        <div>
+          <div class="headline">Social Media Dashboard</div>
+          <div class="subheadline">Total Followers: 23,004</div>
+        </div>
+
+        <div style="display:flex; justify-content: space-between; align-items: center;">
+          <div class="toggle-label">Dark Mode</div>
+
+          <div class="button r" id="button-1">
+            <input type="checkbox" class="checkbox" onchange="toggleTheme();">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-overview">
+
+      <h2>Overview - Overall</h2>
+
+      <div class="section-content">
+
+        <div class="overview-card">
+          <div class="top-border-facebook"></div>
+          <div class="handle facebook">@nathanf</div>
+          <div class="amount">1987</div>
+          <div class="unit">Followers</div>
+          <div class="trend-up">12 Today</div>
+        </div>
+
+        <div class="overview-card">
+          <div class="top-border-twitter"></div>
+          <div class="handle twitter">@nathanf</div>
+          <div class="amount">1044</div>
+          <div class="unit">Followers</div>
+          <div class="trend-up">99 Today</div>
+        </div>
+
+        <div class="overview-card">
+          <div class="top-border-instagram"></div>
+          <div class="handle instagram">@realnathanf</div>
+          <div class="amount">11k</div>
+          <div class="unit">Followers</div>
+          <div class="trend-up">1099 Today</div>
+        </div>
+
+        <div class="overview-card">
+          <div class="top-border-youtube"></div>
+          <div class="handle youtube">Nathan F.</div>
+          <div class="amount">8239</div>
+          <div class="unit">Subscribers</div>
+          <div class="trend-down">144 Today</div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section-overview-today">
+
+      <h2>Overview - Today</h2>
+
+      <div class="section-content">
+
+        <div class="details-card">
+          <div class="details-unit">Page Views</div>
+          <div class="details-image"><img src="images/icon-facebook.svg"></div>
+          <div class="details-amount">87</div>
+          <div class="details-trend-up">3%</div>
+        </div>
+
+        <div class="details-card">
+          <div class="details-unit">Likes</div>
+          <div class="details-image"><img src="images/icon-facebook.svg"></div>
+          <div class="details-amount">52</div>
+          <div class="details-trend-down">2%</div>
+        </div>
+
+        <div class="details-card">
+          <div class="details-unit">Likes</div>
+          <div class="details-image"><img src="images/icon-instagram.svg"></div>
+          <div class="details-amount">5462</div>
+          <div class="details-trend-up">2257%</div>
+        </div>
+
+
+        <div class="details-card">
+          <div class="details-unit">Profile Views</div>
+          <div class="details-image"><img src="images/icon-instagram.svg"></div>
+          <div class="details-amount">52k</div>
+          <div class="details-trend-up">1375%</div>
+        </div>
+
+        <div class="details-card">
+          <div class="details-unit">Retweets</div>
+          <div class="details-image"><img src="images/icon-twitter.svg"></div>
+          <div class="details-amount">117</div>
+          <div class="details-trend-up">303%</div>
+        </div>
+
+        <div class="details-card">
+          <div class="details-unit">Likes</div>
+          <div class="details-image"><img src="images/icon-twitter.svg"></div>
+          <div class="details-amount">507</div>
+          <div class="details-trend-up">553%</div>
+        </div>
+
+        <div class="details-card">
+          <div class="details-unit">Likes</div>
+          <div class="details-image"><img src="images/icon-youtube.svg"></div>
+          <div class="details-amount">107</div>
+          <div class="details-trend-up">19%</div>
+        </div>
+
+        <div class="details-card">
+          <div class="details-unit">Total Views</div>
+          <div class="details-image"><img src="images/icon-youtube.svg"></div>
+          <div class="details-amount">1407</div>
+          <div class="details-trend-up">12%</div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Anton Chigurh</a>.
+  </div>
+  -->
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

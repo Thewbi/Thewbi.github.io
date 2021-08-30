@@ -1,0 +1,352 @@
+:root {
+
+/*
+## Colors
+
+### Primary
+
+- Lime Green: hsl(163, 72%, 41%)
+- Bright Red: hsl(356, 69%, 56%)
+
+- Facebook: hsl(208, 92%, 53%)
+- Twitter: hsl(203, 89%, 53%)
+- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+- YouTube: hsl(348, 97%, 39%)
+
+#### Dark Theme
+
+- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+
+#### Light Theme
+
+- Toggle: hsl(230, 22%, 74%)
+
+### Neutral
+
+#### Dark Theme
+
+- Very Dark Blue (BG): hsl(230, 17%, 14%)
+- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+- Desaturated Blue (Text): hsl(228, 34%, 66%)
+- White (Text): hsl(0, 0%, 100%)
+
+#### Light Theme
+
+- White (BG): hsl(0, 0%, 100%)
+- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+- Very Dark Blue (Text): hsl(230, 17%, 14%)
+
+*/
+
+  /* Primary */
+
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-start: hsl(37, 97%, 70%);
+  --instagram-end: hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+
+  --toggle-light: hsl(230, 22%, 74%);
+
+  --toggle-dark-start: hsl(210, 78%, 56%);
+  --toggle-dark-end: hsl(146, 68%, 55%);
+
+  /* Neutral Dark Theme */
+
+  --very-dark-blue-background: hsl(230, 17%, 14%);
+  --very-dark-blue-top-background: hsl(232, 19%, 15%);
+  --dark-desaturated-blue-card-background: hsl(228, 28%, 20%);
+  --desaturated-blue-text: hsl(228, 34%, 66%);
+  --white-text: hsl(0, 0%, 100%);
+
+  /* Neutral Light Theme */
+
+  --white-background: hsl(0, 0%, 100%);
+  --very-pale-blue-top-background: hsl(225, 100%, 98%);
+  --light-grayish-blue-card-background: hsl(227, 47%, 96%);
+  --dark-grayish-blue-text: hsl(228, 12%, 44%);
+  --very-dark-blue-text: hsl(230, 17%, 14%);
+
+  --overview-card-margin-top: 30px;
+
+  --overview-card-min-width: 250px;
+
+  --background: var(--very-dark-blue-background);
+  --card-background: var(--dark-desaturated-blue-card-background);
+  --text-color: var(--white-text);
+}
+
+
+
+body {
+  /*background-color: var(--very-dark-blue-background);*/
+  background-color: var(--background);
+
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+.view-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 1.9em;
+  color: var(--text-color);
+}
+
+.toggle-label,
+.subheadline {
+  font-weight: 700;
+  font-size: 0.8em;
+  color: var(--desaturated-blue-text);
+}
+
+.toggle-label {
+  padding-right: 15px;
+}
+
+.section-overview {
+  width: 100%;
+}
+
+.section-overview-today {}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+
+}
+
+.overview-today {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --overview-card-min-width: 400px;
+  }
+
+  .section-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .view-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.overview-card {
+  min-width: var(--overview-card-min-width);
+  height: 215px;
+  background-color: var(--card-background);
+
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.overview-card .top-border {
+  background-color: var(--facebook);
+  height: 4px;
+}
+
+.overview-card .top-border-facebook {
+  background-color: var(--facebook);
+  height: 4px;
+}
+.overview-card .top-border-twitter {
+  background-color: var(--twitter);
+  height: 4px;
+}
+.overview-card .top-border-instagram {
+  background-image: linear-gradient(to right, var(--instagram-start) , var(--instagram-end));
+  height: 4px;
+}
+.overview-card .top-border-youtube {
+  background-color: var(--youtube);
+  height: 4px;
+}
+
+
+.overview-card .handle {
+  margin-top: var(--overview-card-margin-top);
+  font-weight: 400;
+  font-size: 0.8em;
+  color: var(--desaturated-blue-text);
+}
+.overview-card .facebook::before {
+  content: url(images/icon-facebook.svg);
+  padding: 0 5px 0 0;
+  vertical-align: -30%;
+}
+.overview-card .twitter::before {
+  content: url(images/icon-twitter.svg);
+  padding: 0 5px 0 0;
+  vertical-align: -30%;
+}
+.overview-card .instagram::before {
+  content: url(images/icon-instagram.svg);
+  padding: 0 5px 0 0;
+  vertical-align: -35%;
+}
+.overview-card .youtube::before {
+  content: url(images/icon-youtube.svg);
+  padding: 0 5px 0 0;
+  vertical-align: -30%;
+}
+
+.overview-card .amount {
+  margin-top: var(--overview-card-margin-top);
+  font-weight: 700;
+  font-size: 3.5em;
+  line-height: 35px;
+  height: 36px;
+}
+
+.overview-card .unit {
+  margin-top: calc(var(--overview-card-margin-top) / 2);
+  font-weight: 200;
+  font-size: 0.8em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--desaturated-blue-text);
+}
+
+.trend-up {
+  margin-top: calc(var(--overview-card-margin-top) - 10px);
+  color: var(--lime-green);
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.trend-up::before {
+  content: url(images/icon-up.svg);
+  padding: 0 5px 0 0;
+  vertical-align: 15%;
+}
+
+.trend-down {
+  margin-top: calc(var(--overview-card-margin-top) - 10px);
+  color: var(--bright-red);
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.trend-down::before {
+  content: url(images/icon-down.svg);
+  padding: 0 5px 0 0;
+  vertical-align: 15%;
+}
+
+
+
+
+
+
+.details-trend-up {
+  color: var(--lime-green);
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.details-trend-up::before {
+  content: url(images/icon-up.svg);
+  padding: 0 5px 0 0;
+  vertical-align: 15%;
+}
+
+.details-trend-down {
+  color: var(--bright-red);
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.details-trend-down::before {
+  content: url(images/icon-down.svg);
+  padding: 0 5px 0 0;
+  vertical-align: 15%;
+}
+
+/*
+.details-card {
+  min-width: 250px;
+  height: 100px;
+  background-color: var(--dark-desaturated-blue-card-background);
+
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 100px 0px;
+  grid-auto-rows: 20px 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+*/
+
+.details-card {
+
+
+  min-width: 210px;
+  height: 70px;
+  background-color: var(--card-background);
+  padding: 20px;
+
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: 30px;
+  grid-template-areas:
+    "a b"
+    "c d";
+}
+
+
+.details-unit {
+  grid-area: a;
+
+  font-weight: 700;
+  font-size: 0.8em;
+  color: var(--desaturated-blue-text);
+}
+.details-image {
+  text-align: right;
+  grid-area: b;
+}
+.details-amount {
+  grid-area: c;
+
+  font-weight: 700;
+  font-size: 1.8em;
+  color: var(--text-color);
+}
+.details-trend-up {
+  text-align: right;
+  grid-area: d;
+}
+.details-trend-down {
+  text-align: right;
+  grid-area: d;
+}
